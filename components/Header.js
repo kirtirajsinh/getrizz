@@ -1,4 +1,5 @@
 import { signIn, signOut, useSession } from "next-auth/react";
+import Link from "next/link";
 
 const Header = () => {
   const { data: sessionData } = useSession();
@@ -32,6 +33,7 @@ const Header = () => {
             </button>
           )}
         </div>
+        <Link href="/characters">Lets move</Link>
       </div>
     </div>
   );

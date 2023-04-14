@@ -3,6 +3,13 @@ import "@/styles/globals.css";
 import { SessionProvider, useSession } from "next-auth/react";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
+import { Sedgwick_Ave } from "@next/font/google";
+
+const SedgwickAve = Sedgwick_Ave({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-sedgwick-ave",
+});
 
 export default function App({
   Component,
@@ -11,8 +18,10 @@ export default function App({
   return (
     <SessionProvider session={session}>
       <RequireAuth />
-      <Nav />
-      <Component {...pageProps} />;
+      <main className={`${SedgwickAve.variable}`}>
+        <Nav />
+        <Component {...pageProps} />;
+      </main>
       <RequireAuth />
     </SessionProvider>
   );

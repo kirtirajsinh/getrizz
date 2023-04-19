@@ -69,7 +69,7 @@ const ChatBox = ({ character, celebData }) => {
   };
 
   return (
-    <div className="w-screen h-[80vh] sm:w-96 p-4 rounded-2xl bg-white/20 backdrop-filter backdrop-blur-lg backdrop-saturate-150">
+    <div className="w-screen h-[80vh] sm:w-1/2 p-4 rounded-2xl bg-white/20 backdrop-filter backdrop-blur-lg  mt-12  ">
       <div className="h-full flex flex-col shadow-sm border-2 p-4 rounded-2xl">
         {/* <!--  Message header section starts    --> */}
         <div className="msg-header flex gap-8 items-center">
@@ -78,15 +78,15 @@ const ChatBox = ({ character, celebData }) => {
           </div>
           <div className="">
             <h3 className="text-[#8870FF] text-lg font-bold">{character}</h3>
-            <p className="-mt-1 text-[#22BF90] text-base">Active now</p>
+            <p className="-mt-1 text-greentext-base">Active now</p>
           </div>
         </div>
         {/* {/* <!-- Message header section ends --> */}
-        <div className="mt-2 bg-[#A899FF] w-72 h-[1.75px]"></div>
+        <div className="mt-2 bg-white w-full h-[1.75px]"></div>
         {/* <!-- Chat inbox section starts --> */}
         <div className="grow md:h-[52vh] overflow-auto">
           <div className="h-full">
-            <div className="h-full overflow-auto scrollbar" id="style-1">
+            <div className="h-full overflow-auto custom-scrollbar" id="style-1">
               <div className="mt-6 transition-all">
                 {/* <!-- Contains the incoming and outgoing messages --> */}
                 <div ref={messagesRef} className="">
@@ -100,7 +100,9 @@ const ChatBox = ({ character, celebData }) => {
                     }}
                     className="scale-95 mr-16"
                   >
-                    <p className="bg-[#DCD6FF] rounded-3xl p-3 text-base">Hi</p>
+                    <p className="bg-[#DCD6FF] rounded-3xl p-3 text-base w-min">
+                      Hi
+                    </p>
                   </motion.div>
 
                   {messages.map((message, index) => (

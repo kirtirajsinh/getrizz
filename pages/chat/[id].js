@@ -12,11 +12,8 @@ const Chat = () => {
     return <div>Loading...</div>;
   }
 
-  console.log(celebId, "celebId");
-  console.log(celeb, "celeb");
-
   return (
-    <div>
+    <div className="flex flex-col items-center">
       <ChatBox character={celebId} celebData={celeb} />
     </div>
   );

@@ -19,7 +19,7 @@ const Header = () => {
             ease: "easeInOut",
             times: [0, 0.2, 0.5, 0.8, 1],
           }}
-          className="font-font-heading text-6xl sm:text-8xl"
+          className="font-font-heading text-6xl sm:text-8xl text-center"
         >
           Rizz check
         </motion.div>
@@ -32,7 +32,7 @@ const Header = () => {
             className="flex flex-row items-center justify-center space-x-2 bg-white rounded-md p-2 shadow-lg hover:bg-gray-200"
             href="/characters"
           >
-            <p>Let's goooo</p>
+            <p>Let&apos;s goooo</p>
           </Link>
         ) : (
           <button

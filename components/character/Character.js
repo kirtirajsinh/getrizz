@@ -2,6 +2,7 @@ import React from "react";
 import celebsData from "../../utils/celebs.json";
 import { motion } from "framer-motion";
 import { useRouter } from "next/router";
+import Image from "next/image";
 
 const Character = () => {
   const router = useRouter();
@@ -26,9 +27,11 @@ const Character = () => {
                   }
                 }
               >
-                <img
+                <Image
                   src={celeb.image}
                   alt={celeb.name}
+                  width={160}
+                  height={160}
                   className=" rounded-full object-center object-cover w-40 h-40"
                 />
               </motion.div>

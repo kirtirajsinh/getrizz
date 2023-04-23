@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { FiSend } from "react-icons/fi";
 import Reply from "./Reply";
+import Image from "next/image";
 
 const ChatBox = ({ character, celebData }) => {
   const messagesRef = useRef();
@@ -74,7 +75,10 @@ const ChatBox = ({ character, celebData }) => {
         {/* <!--  Message header section starts    --> */}
         <div className="msg-header flex gap-8 items-center">
           <div className="h-12 w-12 justify-center items-center rounded-full bg-[#DDD6FF] border-2 border-[#B2A4FF]">
-            <img
+            <Image
+              alt={celebData.name}
+              width={48}
+              height={48}
               className=" rounded-full object-center object-cover w-12 h-12"
               src={celebData.image}
             />

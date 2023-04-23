@@ -74,11 +74,14 @@ const ChatBox = ({ character, celebData }) => {
         {/* <!--  Message header section starts    --> */}
         <div className="msg-header flex gap-8 items-center">
           <div className="h-12 w-12 justify-center items-center rounded-full bg-[#DDD6FF] border-2 border-[#B2A4FF]">
-            <img className="scale-75" src="/images/cat-face.png" />
+            <img
+              className=" rounded-full object-center object-cover w-12 h-12"
+              src={celebData.image}
+            />
           </div>
           <div className="">
             <h3 className="text-[#8870FF] text-lg font-bold">{character}</h3>
-            <p className="-mt-1 text-greentext-base">Active now</p>
+            <p className="-mt-1 text-greentext-base">Online</p>
           </div>
         </div>
         {/* {/* <!-- Message header section ends --> */}

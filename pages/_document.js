@@ -42,17 +42,10 @@ export default function Document() {
             description:
               "A chat-based game where your goal is to befriend AI Celebs,and ask them for a Date💕.",
             url: "https://rizzcheck.vercel.app/",
-            images: [
-              {
-                url: images,
-                alt: "Rizz check",
-              },
-            ],
           }}
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://rizzcheck,vercel.app/" />
-        <meta property="og:image" content={images} />
         <meta property="og:image:alt" content="check your Rizz" />
       </Head>
       <body>

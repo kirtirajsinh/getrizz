@@ -10,7 +10,7 @@ const ChatBox = ({ character, celebData }) => {
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState("");
   console.log(messages);
-  console.log(celebData.prompt, "celebData.prompt");
+  // console.log(celebData.prompt, "celebData.prompt");
   // send message to API /api/chat endpoint
   const sendMessage = async (e) => {
     e.preventDefault();
@@ -35,7 +35,7 @@ const ChatBox = ({ character, celebData }) => {
       }),
     });
 
-    console.log(response, "response from the sendMessage function");
+    // console.log(response, "response from the sendMessage function");
 
     if (!response.ok) {
       throw new Error(response.statusText);
@@ -44,9 +44,9 @@ const ChatBox = ({ character, celebData }) => {
     if (!response.body) return;
 
     const reader = response.body.getReader();
-    console.log(reader, "reader from the sendMessage function");
+    // console.log(reader, "reader from the sendMessage function");
     const decoder = new TextDecoder();
-    console.log(decoder, "decoder from the sendMessage function");
+    // console.log(decoder, "decoder from the sendMessage function");
     let done = false;
 
     let lastMessage = "";

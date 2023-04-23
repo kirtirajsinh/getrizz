@@ -26,7 +26,7 @@ export default function Document() {
             type: "website",
             locale: "en_IE",
             url: "https://rizzcheck.vercel.app/",
-            site_name: "Guess The Prompt",
+            site_name: "Rizz check",
           }}
           twitter={{
             handle: "@ktarchived",

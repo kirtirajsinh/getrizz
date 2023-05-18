@@ -4,6 +4,17 @@ import { prisma } from "./db";
 import GoogleProvider from "next-auth/providers/google";
 
 export const authOptions = {
+  callback: {
+    async session({ session, user }) {
+      if (user) {
+        session.user.id = user.id;
+        session.user.name = user.name;
+        session.user.email = user.email;
+        session.user.image = user.image;
+      }
+      return session;
+    },
+  },
   adapter: PrismaAdapter(prisma),
   secret: process.env.NEXTAUTH_SECRET,
   providers: [

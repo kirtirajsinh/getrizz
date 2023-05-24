@@ -2,15 +2,18 @@ import { signIn, signOut, useSession } from "next-auth/react";
 import Link from "next/link";
 import { FcGoogle } from "react-icons/fc";
 import { motion } from "framer-motion";
+import useDevice from "./Common/useDevice";
 const Header = () => {
   const { data: sessionData } = useSession();
+  const { isMobile, isDesktop } = useDevice();
+  const rizzCheckScale = isMobile ? [1, 1] : [3, 1];
 
   return (
     <>
       <div className="flex flex-col items-center justify-center mt-32 space-y-4 ">
         <motion.div
           animate={{
-            scale: [3, 1],
+            scale: rizzCheckScale,
             rotate: [0, 360],
             borderRadius: ["0%", "0%", "50%", "50%", "0%"],
           }}

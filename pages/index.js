@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import Header from "@/components/Header";
+import Clout from "@/components/Clout";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,6 +24,7 @@ export default function Home() {
       </Head>
       <main>
         <Header />
+        <Clout />
       </main>
     </>
   );

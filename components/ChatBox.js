@@ -70,8 +70,8 @@ const ChatBox = ({ character, celebData }) => {
   };
 
   return (
-    <div className="w-screen h-[80vh] sm:w-1/2 p-4 rounded-2xl bg-white/20 backdrop-filter backdrop-blur-lg  mt-12  ">
-      <div className="h-full flex flex-col shadow-sm border-2 p-4 rounded-2xl">
+    <div className="w-screen h-[80vh]  sm:h-[80vh] sm:w-1/2 p-4 rounded-2xl bg-white/20 backdrop-filter backdrop-blur-lg  mt-12  ">
+      <div className="h-full flex flex-col shadow-sm sm:border-2 p-4 rounded-2xl">
         {/* <!--  Message header section starts    --> */}
         <div className="msg-header flex gap-8 items-center">
           <div className="h-12 w-12 justify-center items-center rounded-full bg-[#DDD6FF] border-2 border-[#B2A4FF]">
